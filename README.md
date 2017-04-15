@@ -10,4 +10,4 @@ $ brew tap decors/powerline-shell
 $ brew install --HEAD powerline-shell
 ```
 
-powerline-shell : [https://github.com/milkbikis/powerline-shell](https://github.com/milkbikis/powerline-shell)
+powerline-shell : [https://github.com/banga/powerline-shell](https://github.com/banga/powerline-shell)
