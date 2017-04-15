@@ -1,14 +1,14 @@
 class PowerlineShell < Formula
   desc "A Powerline like prompt for bash, zsh and fish"
-  homepage "https://github.com/milkbikis/powerline-shell"
-  head "https://github.com/milkbikis/powerline-shell.git"
+  homepage "https://github.com/banga/powerline-shell"
+  head "https://github.com/banga/powerline-shell.git"
   
   depends_on "python" if MacOS.version < :lion
   
   def install
     cp buildpath/"config.py.dist", buildpath/"config.py"
     system "python", "install.py"
-    prefix.install "powerline-shell.py"
+    prefix.install "powerline-shell.py", "lib"
   end
   
   test do
