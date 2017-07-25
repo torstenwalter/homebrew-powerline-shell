@@ -6,7 +6,12 @@ class PowerlineShell < Formula
   depends_on "python" if MacOS.version < :lion
   
   def install
-    cp buildpath/"config.py.dist", buildpath/"config.py"
+    #cp buildpath/"config.py.dist", buildpath/"config.py"
+    cat buildpath/config.py.dist \
+      |sed "s/    'username',/#   'username',/" \
+      |sed "s/    'hostname',/#   'hostname',/" \
+      |sed "s/#    'exit_code',/     'exit_code',/" \
+      > buildpath/config.py2
     system "python", "install.py"
     prefix.install "powerline-shell.py", "lib"
   end
