@@ -6,7 +6,7 @@ Homebrew formula for powerline-shell.
 ## Usage
 
 ```text
-$ brew tap decors/powerline-shell
+$ brew tap torstenwalter/powerline-shell
 $ brew install --HEAD powerline-shell
 ```
 
