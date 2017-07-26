@@ -9,6 +9,7 @@ class PowerlineShell < Formula
     cp buildpath/"config.py.dist", buildpath/"config.py"
     inreplace buildpath/"config.py" do |s|
       s.gsub! "    'username'", "#   'username',"
+      s.gsub! "    'hostname',", "#   'hostname',"
     end
 
     system "python", "install.py"
