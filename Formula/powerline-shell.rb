@@ -10,6 +10,7 @@ class PowerlineShell < Formula
     inreplace buildpath/"config.py" do |s|
       s.gsub! "    'username'", "#   'username',"
       s.gsub! "    'hostname',", "#   'hostname',"
+      s.gsub! "#    'exit_code',", "     'exit_code',"
     end
 
     system "python", "install.py"
